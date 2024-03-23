@@ -1,0 +1,25 @@
+#pragma once
+
+#include <CoreMinimal.h>
+#include <Kismet/BlueprintFunctionLibrary.h>
+#include "Subsystem/ModSubsystem.h"
+#include "FGFactoryConnectionComponent.h"
+#include "BlueprintBeltConnectorModule.h"
+
+#include "ABlueprintBeltConnectorModSubsystem.generated.h"
+
+UCLASS(Abstract)
+class BLUEPRINTBELTCONNECTOR_API ABlueprintBeltConnectorModSubsystem : public AModSubsystem
+{
+	GENERATED_BODY()
+
+public:
+	ABlueprintBeltConnectorModSubsystem();
+	~ABlueprintBeltConnectorModSubsystem();
+
+	UFUNCTION(BlueprintCallable, Category = "Blueprint Belt Connector")
+	static void ConnectBelt(UFGFactoryConnectionComponent* ConnectFrom, UFGFactoryConnectionComponent* ConnectTo);
+
+protected:
+	virtual void BeginPlay() override;
+};

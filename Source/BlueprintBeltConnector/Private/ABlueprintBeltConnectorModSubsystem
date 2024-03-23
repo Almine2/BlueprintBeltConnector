@@ -1,0 +1,23 @@
+#include "ABlueprintBeltConnectorModSubsystem.h"
+#include "BlueprintBeltConnectorModule.h"
+#include "FGFactoryConnectionComponent.h"
+
+ABlueprintBeltConnectorModSubsystem::ABlueprintBeltConnectorModSubsystem()
+{
+	
+}
+
+ABlueprintBeltConnectorModSubsystem::~ABlueprintBeltConnectorModSubsystem()
+{
+}
+
+void ABlueprintBeltConnectorModSubsystem::BeginPlay()
+{
+	Super::BeginPlay();
+
+	
+}
+
+void ABlueprintBeltConnectorModSubsystem::ConnectBelt(UFGFactoryConnectionComponent* ConnectFrom, UFGFactoryConnectionComponent* ConnectTo){
+
+}
